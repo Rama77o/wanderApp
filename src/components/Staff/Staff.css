@@ -1,0 +1,82 @@
+:root {
+  --primaryColor: #3ab3a7;
+  --primaryHover: #0c988a;
+  --secondaryColor: #059789;
+  --scHovColor: #253b53;
+  --greyColor: #f7f7f7;
+}
+
+.secContainer .staffContainer {
+  margin-top: 4rem;
+  gap: 4rem;
+}
+
+.staffContainer .singleStaff {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: .4s ease;
+  position: relative;
+  box-shadow: 0 3px 5px rgb(218, 218, 218);
+}
+
+.staffContainer .singleStaff:hover {
+  transform: translateY(-10px);
+}
+
+.singleStaff .imgDiv {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: -41px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  border: 10px solid white;
+  overflow: hidden;
+}
+
+.singleStaff .imgDiv img {
+  width: 100%;
+  height: 100%;
+}
+
+.singleStaff p {
+  padding: 1rem;
+  line-height: 1.3rem;
+}
+
+.singleStaff .name {
+  color: var(--primaryColor);
+  font-weight: 800;
+  padding-top: 3rem;
+  font-size: 14px;
+}
+
+.singleStaff .jopTitle {
+  color: var(--primaryHover);
+  font-size: 12px;
+  padding: .5rem;
+  font-weight: 500;
+}
+
+.contact {
+  color: var(--primaryColor);
+  font-size: 14px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 574px) {
+  .secContainer .staffContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .secContainer .staffContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

@@ -1,0 +1,157 @@
+:root {
+  --primaryColor: #3ab3a7;
+  --primaryHover: #0c988a;
+  --secondaryColor: #059789;
+  --scHovColor: #253b53;
+  --greyColor: #f7f7f7;
+}
+
+.secContainer .tourContainer {
+  display: grid;
+  gap: 1rem;
+}
+
+.tourContainer .singleTour {
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--greyColor);
+  padding-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .4s ease;
+}
+
+.singleTour:hover {
+  background-color: var(--greyColor);
+}
+
+.singleTour .imgDiv {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.singleTour .imgDiv img {
+  height: 100%;
+  object-fit: cover;
+  transition: .3s ease-in-out;
+}
+
+.singleTour .imgDiv:hover img {
+  transform: scale(1.1);
+}
+
+.singleTour .tourInfo {
+  padding: 0 1rem;
+}
+
+.tourInfo .tourTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primaryColor);
+}
+
+.tourInfo .stars_review {
+  gap: .5rem;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.stars_review .stars {
+  color: rgb(245, 176, 79);
+}
+
+.stars .icon {
+  font-size: 14px;
+}
+
+.stars_review .custReview {
+  font-size: 13px;
+  transform: translateY(-2px);
+}
+
+.tourInfo p {
+  padding-bottom: 1rem;
+}
+
+.tourInfo .btn {
+  color: var(--primaryColor);
+  font-size: 14px;
+  border: 2px solid var(--primaryColor);
+  transition: .3s ease;
+}
+
+.tourInfo .btn:hover {
+  background: var(--primaryColor);
+  color: white;
+  border: 2px solid var(--primaryColor);
+}
+
+
+.singleTour .price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--primaryColor);
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  font-weight: 800;
+}
+
+/* Media Queries */
+@media screen and (min-width: 520px)  {
+  .tourContainer .singleTour {
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 0;
+  }
+  
+  .singleTour .imgDiv {
+    height: 100%;
+    width: 100%;
+  }
+
+  .singleTour .tourInfo {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1054px)  {
+  .tourInfo .tourTitle{
+    font-size: 18px;
+  }
+
+  .stars_review .custReview {
+    font-size: 14px;
+    transform: translateY(-2.5px);
+  }
+
+  .tourInfo p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .tourInfo .btn {
+    font-size: 15px;
+  } 
+}
+
+@media screen and (min-width: 1496px) {
+  .tourInfo .tourTitle{
+    font-size: 20px;
+  }
+
+  .tourInfo p {
+    font-size: 15px;
+  }
+
+  .tourInfo .btn {
+    width: max-content;
+    font-size: 20px;
+  }
+
+  .singleTour .price {
+    font-size: 25px;
+  }
+}
+

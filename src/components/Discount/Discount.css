@@ -1,0 +1,104 @@
+:root {
+  --primaryColor: #3ab3a7;
+  --primaryHover: #0c988a;
+  --secondaryColor: #059789;
+  --scHovColor: #253b53;
+  --greyColor: #f7f7f7;
+}
+
+.discount {
+  width: 100%;
+}
+
+.discount .secContainer {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secContainer video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.secContainer .textDiv {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  color: white;
+  position: absolute;
+  text-align: center;
+}
+
+.textDiv .title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.textDiv p {
+  opacity: 1;
+}
+
+.textDiv .input_btn {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input_btn input {
+  padding: .8rem;
+  font-size: 13;
+  background: #c3fff95f;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.input_btn input::placeholder {
+  color: white;
+  font-size: 15px;
+}
+
+.input_btn .btn {
+  width: 95%;
+  background: var(--primaryColor);
+  color: white;
+  border: none;
+  padding: 1rem 2em;
+  transition: .3s ease;
+}
+
+.input_btn .btn:hover {
+  background: var(--primaryHover);
+}
+
+@media screen and (min-width: 520px) {
+  .secContainer .textDiv {
+    gap: 2rem;
+  }
+  
+  .textDiv .title {
+    font-size: 25px;
+  }
+  
+  .textDiv p {
+    font-size: 18px;
+    max-width: 500px;
+    padding: 0 3rem;
+  }
+
+  .input_btn .btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .textDiv .title {
+    font-size: 30px;
+  }
+}

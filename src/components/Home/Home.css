@@ -1,0 +1,92 @@
+:root {
+    --primaryColor: #3ab3a7;
+    --primaryHover: #0c988a;
+    --scHovColor: #253b53;
+    --greyColor: #f7f7f7;
+}
+
+.home {
+    height: 90vh;
+    width: 100%;
+    padding: 5rem 1.5rem;
+    background: linear-gradient(rgba(0,0,1,0.42), rgba(0,0,1,0.549)), url("C:\wanderApp\myapp\src\components\images\banner4.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    row-gap: 3rem;
+    object-fit: cover;
+}
+
+.homeText .spanText {
+    color: white;
+    font-weight: 500;
+}
+
+.homeText .homeTitle {
+    color: white;
+    padding: 3rem 0;
+    font-size: 40px;
+}
+
+strong {
+    font-weight: 800;
+}
+
+.homeText .btn {
+    width: max-content;
+    border: 2px solid white;
+    color: white;
+    font-size: 13px;
+    transition: .3;
+}
+
+.homeText .btn:hover {
+    background: white;
+    color: var(--primaryColor);
+    border: 2px solid white;
+}
+
+/* Media Queries */
+@media screen and (min-width: 690px){
+    .home .homeText {
+        transform: translateX(5rem);
+    }
+    .homeText .spanText {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .homeText .homeTitle {
+        padding: 2rem 0;
+        font-size: 45px;
+    }
+
+    .homeText .btn {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 840px){
+    .home .homeText {
+        transform: translateX(10rem);
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .home .homeText {
+        transform: translateX(20rem);
+    }
+
+    .homeText .spanText {
+        font-size: 25px;
+    }
+
+    .home .homeTitle {
+        font-size: 70px;
+    }
+
+    .homeText .btn {
+        font-size: 25px;
+    }
+}

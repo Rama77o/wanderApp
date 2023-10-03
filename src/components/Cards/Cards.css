@@ -1,0 +1,88 @@
+:root {
+  --primaryColor: #3ab3a7;
+  --primaryHover: #0c988a;
+  --secondaryColor: #059789;
+  --scHovColor: #253b53;
+  --greyColor: #f7f7f7;
+}
+
+.cards {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: var(--greyColor);
+  z-index: 5000;
+}
+
+.singleCard {
+  height: 250px;
+  width: 100%;
+  transform: translateY(-50px);
+  position: relative;
+  transition: .5s;
+}
+
+.singleCard::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.593));
+  bottom: 0;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.singleCard .imgDiv {
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.singleCard .imgDiv img {
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.singleCard .textDiv {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 20px;
+  color: white;
+  z-index: 3;
+}
+
+.cards .spanText {
+  color: black;
+  text-align: center;
+  transform: translateY(-50px);
+  margin: auto;
+  gap: .3rem;
+  margin-top: 1.5rem;
+}
+
+.cards .spanText:hover {
+  font-weight: 600;
+}
+
+.cards .spanText .icon {
+  transition: .4s;
+  transform: translate(10px);
+}
+
+/* Media Queries */
+@media screen and (min-width: 520px) {
+  .cards .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .cards .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
